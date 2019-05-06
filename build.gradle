@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+version '0.0.1'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+project.ext.lwjglVersion = "3.2.1"
+
+dependencies {
+    compile "org.lwjgl:lwjgl:${lwjglVersion}"
+    /*
+    compile "org.lwjgl.lwjgl:lwjgl-platform:${lwjglVersion}:natives-windows"
+    compile "org.lwjgl.lwjgl:lwjgl-platform:${lwjglVersion}:natives-linux"
+    compile "org.lwjgl.lwjgl:lwjgl-platform:${lwjglVersion}:natives-osx"
+    */
+    compile "org.lwjgl:lwjgl-glfw:${lwjglVersion}"
+}
